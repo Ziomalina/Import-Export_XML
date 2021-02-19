@@ -1,0 +1,32 @@
+<?sap.transform simple?>
+<tt:transform xmlns:tt="http://www.sap.com/transformation-templates">
+
+<tt:root name="data_tab"/>
+
+<tt:template>
+
+
+
+<DATA_NODE>
+
+<tt:loop ref="data_tab" name="line">
+
+    <ZMGR_TAB_XML>
+        <ID_PRODUCERS><tt:value ref="$line.ID_PRODUCERS"/></ID_PRODUCERS>
+        <NAME><tt:value ref="$line.NAME"/></NAME>
+        <EMAIL><tt:value ref="$line.EMAIL"/></EMAIL>
+        <CITY><tt:value ref="$line.CITY"/></CITY>
+        <COUNTRY><tt:value ref="$line.COUNTRY"/></COUNTRY>
+        <PHONE><tt:value ref="$line.PHONE"/></PHONE>
+        <POSTAL_CODE><tt:value ref="$line.POSTAL_CODE"/></POSTAL_CODE>
+    </ZMGR_TAB_XML>
+
+</tt:loop>
+
+</DATA_NODE>
+
+
+
+</tt:template>
+
+</tt:transform>
